@@ -49,7 +49,7 @@
 
         function copyText() {
             text.select();text.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(window.location.href.split('/').slice(0,-1).join('/') + text.value);
+            navigator.clipboard.writeText(window.location.href.slice(0, -window.location.pathname.length) + text.value);
         }
         function saveFile(){
             window.open(templateUrl + params.toString())

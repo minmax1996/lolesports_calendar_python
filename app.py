@@ -13,7 +13,7 @@ app = Flask(__name__,
 
 @app.route('/')
 def root():
-    return
+    return app.send_static_file("index.html")
 
 @app.route('/calendar', methods=['GET'])
 def calendar():
